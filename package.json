@@ -1,0 +1,15 @@
+{
+  "name": "migrate",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/migrate.js",
+  "scripts": {
+    "migrate": "node src/migrate.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "got": "14.4.3",
+    "formdata-node": "^6.0.3"
+  }
+}
