@@ -61,7 +61,9 @@ for (const notebook of notebooks.value) {
                 const html = await fetchPageContent(page.id);
                 await createDocument(collectionId, page.title, html);
                 console.log(`-- Created document: ${page.title}`);
-                await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                // Rate limit bypass
+                await new Promise((resolve) => setTimeout(resolve, 250));
             }
         }
     }
