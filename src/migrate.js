@@ -6,11 +6,8 @@ import {
     fetchDocuments
 } from "./outline/api.js";
 
-const excludeNotebooks = [
-];
-
-const excludePages = [
-];
+const excludeNotebooks = (process.env.EXCLUDE_NOTEBOOKS || '').split(',');
+const excludePages = (process.env.EXCLUDE_PAGES || '').split(',');
 
 const notebooks = await fetchOneNoteNotebooks();
 
